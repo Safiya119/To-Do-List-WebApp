@@ -1,0 +1,128 @@
+body {
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(135deg, #f3e5f5, #d8bfd8, #c5cae9, #f3e5f5, #d8bfd8, #c5cae9);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    /* Ensure the text container is above other elements */
+    pointer-events: none;
+    /* Disable pointer events so it doesn’t block interaction with other elements */
+}
+
+.text-left,
+.text-right {
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+    pointer-events: auto;
+    /* Enable pointer events on the text elements themselves */
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    z-index: 2;
+    /* Ensure the container is above other elements */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.task-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#new-task {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    z-index: 3;
+    /* Make sure the input field is on top of everything */
+}
+
+#add-task {
+    padding: 8px;
+    background-color: #93bd93;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    z-index: 3;
+}
+
+#add-task:hover {
+    background-color: #9dcea5;
+}
+
+.task-list h2 {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #e9e9e9;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+li .completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.delete {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.delete:hover {
+    background-color: darkred;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.checkbox.completed {
+    background-color: green;
+    color: white;
+}
